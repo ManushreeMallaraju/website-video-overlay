@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+:root {
+  --overlay-color: #90b6cf;
+}
+
 * {
   /*universal selector*/
   box-sizing: border-box; /*adding any borders, doesn't efects the sixe of the element*/
@@ -14,12 +18,13 @@
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  display: flex; /* puts in the row*/
+  display: flex; /* puts in the row */
   justify-content: space-between;
   align-items: center;
   background: #111;
   color: #fff;
   z-index: 2;
+  transition: 0.5s;
 }
 
 .showcase.active {
@@ -76,7 +81,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #d15d2f;
+  background: var(--overlay-color);
   mix-blend-mode: overlay;
 }
 
@@ -132,22 +137,14 @@
   align-items: center;
 }
 
-.social li {
-  list-style: none;
-}
-
-.social li a {
-  display: inline-block;
-  filter: invert(1);
+.social i {
   margin-right: 20px;
-  transform: scale(0.5);
+  color: #fff;
   transition: 0.5s;
-  /* background-color: #fff; */
 }
 
-.social li a:hover {
-  transform: scale(0.5) translateY(-15px);
-  /* background-color: #fff; */
+.social i:hover {
+  transform: translateY(-15px);
 }
 
 .menu {
@@ -172,10 +169,10 @@
 }
 
 .menu ul li a:hover {
-  background: #d15d2f;
+  color: var(--overlay-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 798px) {
   .showcase,
   .showcase header {
     padding: 40px;

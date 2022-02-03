@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Travel Landing Page</title>
   </head>
   <body>
-    <section class="showcase active">
+    <section class="showcase">
       <header>
         <h2 class="logo">Travel</h2>
-        <div class="toggle active"></div>
+        <div class="toggle"><i class="fas fa-bars"></i></div>
         <!-- toggle -> changes depending on the state of the menu  -->
       </header>
       <video src="explore.mp4" muted loop autoplay></video>
@@ -28,15 +35,10 @@
       </div>
 
       <ul class="social">
-        <li>
-          <a href="#"><img src="facebook.png" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="instagram.jpg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="twitter.png" alt="" /></a>
-        </li>
+        <!-- font awesome will go here, instead of icons -->
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
       </ul>
     </section>
     <div class="menu">
@@ -48,5 +50,15 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
+
+    <script>
+      const menuToggle = document.querySelector('.showcase')
+      // const showcase = document.querySelector('.showcase')
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        // showcase.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>
